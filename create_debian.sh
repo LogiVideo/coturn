@@ -11,7 +11,5 @@ debuild -b -uc -us
 
 echo "Finished: Output .deb file is in ../"
 
-echo "Contents of working directory"
-ls -lah ./
-echo "Contents of parent directory"
-ls -lah ../
+repoversion=$(git describe --long)
+aws s3 cp ../*.deb "s3://dev-build.logitech.artifacts/coturn/coturn-${repoversion}.deb"
