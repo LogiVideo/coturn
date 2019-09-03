@@ -9,3 +9,8 @@ export TURN_NO_SCTP=1
 debuild -b -uc -us
 
 echo "Finished: Output .deb file is in ../"
+
+echo "Contents of working directory"
+ls -lah ./
+echo "Contents of parent directory"
+ls -lah ../
