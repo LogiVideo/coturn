@@ -1,5 +1,6 @@
 #!/bin/bash
 set -e
+export DEBIAN_FRONTEND=noninteractive
 export TURN_NO_SQLITE=1
 export TURN_NO_PQ=1
 export TURN_NO_MYSQL=1
