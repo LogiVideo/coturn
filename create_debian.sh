@@ -13,4 +13,4 @@ echo "Finished: Output .deb file is in ../"
 
 repoversion=$(git describe --long)
 debfile=$(ls ../*.deb)
-aws s3 cp "$debfile" "s3://dev-build.logitech.artifacts/coturn/${repoversion}/"
+aws s3 cp "$debfile" "s3://dev-build.logitech.artifacts/coturn/${repoversion}/coturn_amd64.deb"
