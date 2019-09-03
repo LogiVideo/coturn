@@ -12,4 +12,5 @@ debuild -b -uc -us
 echo "Finished: Output .deb file is in ../"
 
 repoversion=$(git describe --long)
-aws s3 cp "../*.deb" "s3://dev-build.logitech.artifacts/coturn/coturn-${repoversion}.deb"
+cp ../*.deb ./coturn_s3_upload.deb
+aws s3 cp "./coturn_s3_upload.deb" "s3://dev-build.logitech.artifacts/coturn/coturn-${repoversion}.deb"
